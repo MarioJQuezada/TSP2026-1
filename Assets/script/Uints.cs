@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class SunTextureAnimator : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Material sunMaterial;
+    public float speed = 0.02f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float offset = Time.time * speed;
+        sunMaterial.mainTextureOffset = new Vector2(offset, offset);
     }
 }
+
